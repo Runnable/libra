@@ -4,6 +4,6 @@ ADD . /libra
 
 WORKDIR /libra
 
-RUN npm install
+RUN npm install --production
 
 CMD node index.js
