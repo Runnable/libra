@@ -4,10 +4,6 @@ var Lab = require('lab');
 var lab = exports.lab = Lab.script();
 var describe = lab.describe;
 var it = lab.it;
-var after = lab.after;
-var afterEach = lab.afterEach;
-var before = lab.before;
-var beforeEach = lab.beforeEach;
 var Code = require('code');
 var expect = Code.expect;
 var os = require('os');
@@ -24,8 +20,8 @@ describe('libra functional test', function () {
     done();
   });
 
-  if (os.platform() === 'darwin') {
-    it('CANT RUN ON OSX: should return data for match');
+  if (!~os.release().indexOf('generic')) {
+    it('CANT RUN ON OSX: run on linux system');
   } else {
     it('should return data for match', function(done) {
       var index = path.resolve(__dirname, '../../', 'index.js');

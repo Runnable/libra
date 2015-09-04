@@ -47,4 +47,4 @@ docker run -it --pid=host --privileged --rm -e LOOKUP_CMD='/docker' LOOKUP_ARGS=
 
 # notes
 this container must be run with `--pid=host` if you want to inspect processes on the host
-if process is privileged you will also need --privileged
+if process is privileged you will also need `--privileged`
