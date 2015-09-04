@@ -1,0 +1,36 @@
+{
+  "name": "libra",
+  "version": "1.0.0",
+  "description": "white magic spell which displays information about a process from /proc",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -vc",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Runnable/libra.git"
+  },
+  "keywords": [
+    "libra",
+    "proc",
+    "ps",
+    "info"
+  ],
+  "author": "anandkumarpatel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Runnable/libra/issues"
+  },
+  "homepage": "https://github.com/Runnable/libra#readme",
+  "dependencies": {
+    "101": "^1.0.0",
+    "async": "^1.4.2",
+    "proc-pid": "^1.0.2",
+    "ps-node": "0.0.4"
+  },
+  "devDependencies": {
+    "code": "^1.5.0",
+    "lab": "^5.16.0"
+  }
+}
