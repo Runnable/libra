@@ -31,7 +31,7 @@ if you want to get information on `node -a` set `LOOKUP_CMD=node` and  `LOOKUP_A
 # usage
 
 ```
-docker run -it --pid=host --privileged --rm -e LOOKUP_CMD='/docker' LOOKUP_ARGS='-d' runnable/libra
+docker run -it --pid=host --privileged --rm -e LOOKUP_CMD='/docker' -e LOOKUP_ARGS='-d' runnable/libra
 ```
 
 # output
