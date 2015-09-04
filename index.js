@@ -29,9 +29,6 @@ function getDockerInfo (pid, cb) {
       return cb(new Error('proc lookup failed'));
     }
 
-    data.io = data.io || {};
-    data.status = data.status || {};
-
     var statusData = ['FDSize', 'VmPeak', 'VmSize', 'VmHWM', 'VmRSS',
       'VmData', 'VmStk', 'VmExe', 'VmPTE', 'Threads',
       'voluntary_ctxt_switches', 'nonvoluntary_ctxt_switches'];

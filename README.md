@@ -31,13 +31,13 @@ if you want to get information on `node -a` set `LOOKUP_CMD=node` and  `LOOKUP_A
 # usage
 
 ```
-docker run -it --pid=host --rm -e LOOKUP_CMD='/docker' LOOKUP_ARGS='-d' runnable/libra
+docker run -it --pid=host --privileged --rm -e LOOKUP_CMD='/docker' LOOKUP_ARGS='-d' runnable/libra
 ```
 
 # output
 ## on success
 ```
-
+{"info":{"FDSize":2048,"VmPeak":"33373208 kB","VmSize":"33373208 kB","VmHWM":"503816 kB","VmRSS":"375808 kB","VmData":"33359456 kB","VmStk":"136 kB","VmExe":"13444 kB","VmPTE":"9756 kB","Threads":1980,"voluntary_ctxt_switches":444,"nonvoluntary_ctxt_switches":623,"rchar":229278009179,"wchar":164334551263,"syscr":176566383,"syscw":48958240,"read_bytes":268124160,"write_bytes":74151432192,"cancelled_write_bytes":38762946560}}
 ```
 
 ## on error
@@ -47,3 +47,4 @@ docker run -it --pid=host --rm -e LOOKUP_CMD='/docker' LOOKUP_ARGS='-d' runnable
 
 # notes
 this container must be run with `--pid=host` if you want to inspect processes on the host
+if process is privileged you will also need --privileged
